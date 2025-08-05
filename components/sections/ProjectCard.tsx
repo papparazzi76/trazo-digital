@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Eye } from "lucide-react";
+import Image from "next/image";
 
 interface ProjectCardProps {
   title: string;
   description: string;
-  image: string;
+  image: string; // La ruta de la imagen ya viene como string desde el componente padre
   category: string;
   technologies: string[];
   demoUrl?: string;
@@ -24,11 +25,12 @@ const ProjectCard = ({
     <div className="group relative bg-gradient-card rounded-2xl overflow-hidden hover-3d glow-card transition-all duration-500 hover:glow-float">
       {/* Image container */}
       <div className="relative h-64 overflow-hidden">
-        <img
+        <Image
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-          loading="lazy"
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
 
         {/* Overlay on hover */}
