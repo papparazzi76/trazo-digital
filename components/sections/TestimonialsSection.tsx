@@ -1,3 +1,5 @@
+"use client"; // Añadido para indicar que es un Componente de Cliente
+
 import { useState, useEffect } from "react";
 import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
