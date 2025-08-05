@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Sparkles } from "lucide-react";
-import heroBackground from "@/assets/hero-background.jpg";
+import Image from "next/image";
+import heroBackground from "../../../public/images/hero-background.jpg";
 
 const HeroSection = () => {
   const scrollToProjects = () => {
@@ -11,11 +12,13 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src={heroBackground}
           alt="Diseñadora web de Trazo Studio trabajando en un proyecto de branding digital"
-          className="w-full h-full object-cover opacity-40"
-          loading="lazy"
+          className="w-full h-full object-cover"
+          priority // Carga esta imagen de forma prioritaria por ser "Above the fold"
+          fill
+          style={{ objectFit: 'cover', opacity: 0.4 }}
         />
         <div className="absolute inset-0 bg-gradient-hero" />
       </div>
