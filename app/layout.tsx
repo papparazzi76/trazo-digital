@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css"; // Se renombra index.css a globals.css
+import "./globals.css"; // CORRECCIÓN: La ruta correcta es './globals.css'
 import Header from "@/components/sections/Header";
 import Footer from "@/components/sections/Footer";
 
@@ -10,11 +10,12 @@ export const metadata: Metadata = {
   title: "Trazo Studio | Diseño y Desarrollo Web de Experiencias Digitales",
   description: "En Trazo Studio creamos sitios web y aplicaciones extraordinarias que cautivan, convierten y elevan tu marca. Portfolio premium de desarrollo web.",
   authors: [{ name: "Trazo Studio" }],
-  metadataBase: new URL("https://URL-DE-TU-WEB.com"), // Reemplaza con tu URL
+  // Asegúrate de reemplazar esta URL base con tu dominio final
+  metadataBase: new URL("https://trazo-digital.vercel.app"), 
   openGraph: {
     title: "Trazo Studio | Diseño y Desarrollo Web",
     description: "Creamos experiencias digitales extraordinarias que transforman ideas en realidades impactantes.",
-    url: "https://URL-DE-TU-WEB.com",
+    url: "https://trazo-digital.vercel.app",
     siteName: "Trazo Studio",
     images: [
       {
