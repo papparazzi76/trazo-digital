@@ -1,7 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Sparkles } from "lucide-react";
 import Image from "next/image";
-import heroBackground from "../../../public/images/hero-background.jpg";
 
 const HeroSection = () => {
   const scrollToProjects = () => {
@@ -13,10 +14,10 @@ const HeroSection = () => {
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={heroBackground}
+          src="/images/hero-background.jpg" // Ruta absoluta desde /public
           alt="Diseñadora web de Trazo Studio trabajando en un proyecto de branding digital"
           className="w-full h-full object-cover"
-          priority // Carga esta imagen de forma prioritaria por ser "Above the fold"
+          priority
           fill
           style={{ objectFit: 'cover', opacity: 0.4 }}
         />
