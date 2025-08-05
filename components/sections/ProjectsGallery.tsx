@@ -3,22 +3,9 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
-// Importa las imágenes estáticas
-import projectLaTentacion from "../../../public/images/projects/Captura de pantalla 2025-07-24 112226.png";
-import projectBienestarNatural from "../../../public/images/projects/Captura de pantalla 2025-07-24 112325.png";
-import projectTulsi from "../../../public/images/projects/Captura de pantalla 2025-07-24 112422.png";
-import projectImprentaCeleste from "../../../public/images/projects/Captura de pantalla 2025-07-24 112444.png";
-import projectProptools from "../../../public/images/projects/Captura de pantalla 2025-07-24 112536.png";
-import projectFutbolCommunity from "../../../public/images/projects/Captura de pantalla 2025-07-24 112611.png";
-import projectGastroLava from "../../../public/images/projects/Captura de pantalla 2025-07-24 112643.png";
-import projectEstudioPortfolio from "../../../public/images/projects/Captura de pantalla 2025-07-24 112804.png";
-import projectRebecaBruna from "../../../public/images/projects/Captura de pantalla 2025-07-24 112835.png";
-import projectValladolidTurismo from "../../../public/images/projects/Captura de pantalla 2025-07-24 113000.png";
-import projectIadomus from "../../../public/images/projects/Captura de pantalla 2025-07-25 084331.png";
-import projectMagoTono from "../../../public/images/projects/Captura de pantalla 2025-07-25 084440.png";
-import projectChefMariscal from "../../../public/images/projects/Captura de pantalla 2025-07-25 084720.png";
+// Las imágenes se referenciarán con rutas absolutas desde /public
+// No es necesario importarlas aquí
 
 const ProjectsGallery = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -28,7 +15,7 @@ const ProjectsGallery = () => {
       id: 1,
       title: "La Tentación",
       description: "Sitio web vibrante para empresa de gofres premium con experiencia visual atractiva.",
-      image: projectLaTentacion.src,
+      image: "/images/projects/Captura de pantalla 2025-07-24 112226.png",
       category: "E-commerce",
       technologies: ["React", "Node.js", "Stripe", "MongoDB"],
     },
@@ -36,7 +23,7 @@ const ProjectsGallery = () => {
       id: 2,
       title: "Solo por hoy",
       description: "Plataforma de bienestar integral con reservas online y experiencia de usuario serena.",
-      image: projectBienestarNatural.src,
+      image: "/images/projects/Captura de pantalla 2025-07-24 112325.png",
       category: "Bienestar",
       technologies: ["Next.js", "TypeScript", "PostgreSQL", "AWS"],
     },
@@ -44,7 +31,7 @@ const ProjectsGallery = () => {
         id: 3,
         title: "Tulsi - Indian Restaurant",
         description: "Sitio web elegante para restaurante indio con galería visual y sistema de reservas.",
-        image: projectTulsi.src,
+        image: "/images/projects/Captura de pantalla 2025-07-24 112422.png",
         category: "Restaurante",
         technologies: ["React", "Sanity CMS", "Vercel", "Stripe"],
       },
@@ -52,7 +39,7 @@ const ProjectsGallery = () => {
         id: 4,
         title: "Imprenta Gráficas Celeste",
         description: "Portal corporativo para servicios de impresión con calculadora de precios y gestión de pedidos.",
-        image: projectImprentaCeleste.src,
+        image: "/images/projects/Captura de pantalla 2025-07-24 112444.png",
         category: "Corporativo",
         technologies: ["Vue.js", "Laravel", "MySQL", "PayPal"],
       },
@@ -60,7 +47,7 @@ const ProjectsGallery = () => {
         id: 5,
         title: "PropTools",
         description: "Herramientas profesionales para venta de inmuebles con IA integrada y gestión de propiedades.",
-        image: projectProptools.src,
+        image: "/images/projects/Captura de pantalla 2025-07-24 112536.png",
         category: "Inmobiliaria",
         technologies: ["React", "Python", "Django", "AI/ML"],
       },
@@ -68,7 +55,7 @@ const ProjectsGallery = () => {
         id: 6,
         title: "11 contra once",
         description: "Plataforma de comunidad futbolística con gaming, predicciones y recompensas.",
-        image: projectFutbolCommunity.src,
+        image: "/images/projects/Captura de pantalla 2025-07-24 112611.png",
         category: "Gaming",
         technologies: ["React", "Node.js", "WebSocket", "Redis"],
       },
@@ -76,7 +63,7 @@ const ProjectsGallery = () => {
         id: 7,
         title: "Gastro Lava",
         description: "Sitio web sofisticado para restaurante gourmet con experiencia culinaria premium.",
-        image: projectGastroLava.src,
+        image: "/images/projects/Captura de pantalla 2025-07-24 112643.png",
         category: "Restaurante",
         technologies: ["Next.js", "Contentful", "Vercel", "Analytics"],
       },
@@ -84,7 +71,7 @@ const ProjectsGallery = () => {
         id: 8,
         title: "Estudio Creativo",
         description: "Portfolio minimalista para estudio de diseño con showcase de proyectos y experiencia visual limpia.",
-        image: projectEstudioPortfolio.src,
+        image: "/images/projects/Captura de pantalla 2025-07-24 112804.png",
         category: "Portfolio",
         technologies: ["React", "Three.js", "GSAP", "Netlify"],
       },
@@ -92,7 +79,7 @@ const ProjectsGallery = () => {
         id: 9,
         title: "Rebeca H. Bruña",
         description: "Portal inmobiliario de lujo especializado en propiedades exclusivas en Valladolid.",
-        image: projectRebecaBruna.src,
+        image: "/images/projects/Captura de pantalla 2025-07-24 112835.png",
         category: "Inmobiliaria",
         technologies: ["React", "Node.js", "MongoDB", "Maps API"],
       },
@@ -100,7 +87,7 @@ const ProjectsGallery = () => {
         id: 10,
         title: "Así es Valladolid",
         description: "Portal turístico oficial con experiencias inmersivas, videos y guías culturales.",
-        image: projectValladolidTurismo.src,
+        image: "/images/projects/Captura de pantalla 2025-07-24 113000.png",
         category: "Turismo",
         technologies: ["Vue.js", "Strapi", "Video API", "PWA"],
       },
@@ -108,7 +95,7 @@ const ProjectsGallery = () => {
         id: 11,
         title: "Iadomus",
         description: "Agencia inmobiliaria moderna con sistema avanzado de búsqueda de propiedades.",
-        image: projectIadomus.src,
+        image: "/images/projects/Captura de pantalla 2025-07-25 084331.png",
         category: "Inmobiliaria",
         technologies: ["React", "Node.js", "MongoDB", "Maps API"],
       },
@@ -116,7 +103,7 @@ const ProjectsGallery = () => {
         id: 12,
         title: "El Mago Toño",
         description: "Sitio web teatral para mago con galería de espectáculos y sistema de contratación.",
-        image: projectMagoTono.src,
+        image: "/images/projects/Captura de pantalla 2025-07-25 084440.png",
         category: "Entretenimiento",
         technologies: ["React", "TypeScript", "Sanity CMS", "Vercel"],
       },
@@ -124,7 +111,7 @@ const ProjectsGallery = () => {
         id: 13,
         title: "Chef Mariscal",
         description: "Portal profesional de asesoramiento gastronómico para restaurantes.",
-        image: projectChefMariscal.src,
+        image: "/images/projects/Captura de pantalla 2025-07-25 084720.png",
         category: "Restaurante",
         technologies: ["Next.js", "Strapi", "PostgreSQL", "AWS"],
       }
@@ -175,7 +162,7 @@ const ProjectsGallery = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <div
-              key={project.id} // CORRECCIÓN: Añadida la key que faltaba
+              key={project.id}
               className="animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
