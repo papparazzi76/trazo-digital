@@ -1,5 +1,5 @@
 import { Instagram, Twitter, Linkedin, Github, Mail, Phone, MapPin } from "lucide-react";
-import Logo from "@/assets/LOGOTRAZOb.png"; // RUTA CORREGIDA
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Brand section */}
           <div className="space-y-6">
             <div>
-              <img src={Logo} alt="Logo de Trazo Studio" className="h-8 mb-4" />
+              <Image src="/LOGOTRAZOb.png" alt="Logo de Trazo Studio" width={120} height={32} className="mb-4" />
               <p className="text-muted-foreground leading-relaxed">
                 Creamos experiencias digitales extraordinarias que transforman
                 ideas en realidades impactantes.
